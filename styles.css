@@ -1,1 +1,129 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+.headerBackground {
+  position: absolute;
+  background-color: #0991b2;
+  padding-top: 200px;
+  height: 450px;
+  left: 5%;
+  right: 5%;
+  margin-top: -200px;
+  box-shadow: 10px 10px 10px rgb(0 0 0 / 40%);
+  transform: skewY(-10deg);
+  z-index: -1;
+}
+.headerContainer {
+  /* margin-bottom: 150px; */
+}
+.picAndAboutContainer {
+  min-height: 400px;
+  max-width: 80%;
+  justify-self: center;
+  /* transform: skewY(10deg); */
+  background-color: white;
+  box-shadow: 10px 10px 10px rgb(0 0 0 / 40%);
+  box-sizing: border-box;
+  padding: 10px 10px;
+  margin-top: 50px;
+}
 
+.imgContainer {
+  position: relative;
+  float: left;
+  margin-left: -40px;
+  margin-top: -40px;
+  margin-bottom: -10px;
+  margin-right: 20px;
+  /* padding: 10px; */
+}
+img {
+  max-width: 450px;
+  max-height: 450px;
+}
+.name {
+  /* position: absolute; */
+  color: white;
+  font-size: 2.5rem;
+  margin: 0px 0px 0px 100px;
+
+  transform: translateY(-50px);
+  /* transform: translateX(-50px); */
+}
+
+.aboutMeContainer {
+  /* width: fit-content; */
+  margin-left: 32px;
+  /* height: 200px; */
+}
+
+.aboutMeContainer h1 {
+  font-size: 4rem;
+  margin: 5px 0px;
+}
+.aboutMeContainer p {
+  font-size: 1.5rem;
+  margin: 0px 0px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1100px) {
+  .picAndAboutContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+    max-width: 80%;
+    justify-self: center;
+    /* transform: translateY(100px) skewY(10deg); */
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(0 0 0 / 40%);
+    box-sizing: border-box;
+    padding: 10px 10px;
+    /* margin-top: -20px; */
+  }
+
+  .imgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    float: none;
+    width: 90%;
+    margin: auto;
+  }
+
+  img {
+    width: 90%;
+    aspect-ratio: 1 / 1;
+  }
+  .name {
+    position: absolute;
+    top: -50px;
+    color: white;
+    font-size: 6vw;
+    justify-self: flex-end;
+    margin: 20px 0px 0px 0px;
+
+    /* transform: translateY(-350px); */
+    /* transform: translateX(150px); */
+  }
+  .headerContainer {
+    /* padding-top: 150px; */
+  }
+  body {
+    padding-top: 10px;
+  }
+  .aboutMeContainer h1 {
+    font-size: 6vw;
+  }
+  .aboutMeContainer p {
+    font-size: 3vw;
+  }
+}
+
+.contentContainer {
+  margin-top: 200px;
+}
