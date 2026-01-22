@@ -7,8 +7,7 @@ body {
   background-color: #0991b2;
   padding-top: 200px;
   height: 450px;
-  left: 5%;
-  right: 5%;
+  width: 100%;
   margin-top: -200px;
   box-shadow: 10px 10px 10px rgb(0 0 0 / 40%);
   transform: skewY(-10deg);
@@ -126,4 +125,80 @@ img {
 
 .contentContainer {
   margin-top: 200px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5em;
+  width: 70%;
+  margin: auto;
+  /* justify-content: center; */
+}
+
+.project {
+  width: 350px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  justify-self: center;
+}
+
+#first .projectImg {
+  background-color: #972c26;
+  color: white;
+  height: 65%;
+}
+
+#second .projectImg {
+  background-color: #266297;
+  color: white;
+  height: 65%;
+}
+
+#third .projectImg {
+  background-color: #269746;
+  color: white;
+  height: 65%;
+}
+
+#fourth .projectImg {
+  background-color: #268f97;
+  color: white;
+  height: 65%;
+}
+
+#fifth .projectImg {
+  background-color: #b72182;
+  color: white;
+  height: 65%;
+}
+
+#sixth .projectImg {
+  background-color: #ef4923;
+  color: white;
+  height: 65%;
+}
+
+.projectHeader {
+  display: flex;
+  height: 15%;
+}
+
+.projectDescription {
+  height: 20%;
+}
+
+.footerContainer {
+  background-color: #0991b2;
+  margin: auto;
+  width: 100%;
+  margin-top: 50px;
 }
