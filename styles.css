@@ -18,12 +18,11 @@ body::before {
   min-height: 400px;
   max-width: 50%;
   justify-self: center;
-  /* transform: skewY(10deg); */
+  margin: 50 px 0 auto;
   background-color: white;
   box-shadow: 10px 10px 10px rgb(0 0 0 / 40%);
   box-sizing: border-box;
   padding: 10px 10px;
-  margin-top: 50px;
 }
 
 .imgContainer {
@@ -142,7 +141,7 @@ body::before {
 }
 
 .project {
-  max-width: 30rem;
+  max-width: 35rem;
   height: 420px;
   display: flex;
   flex-direction: column;
@@ -158,10 +157,16 @@ body::before {
 .projectHeader {
   display: flex;
   height: 15%;
+  font-size: 1.5rem;
+}
+.projectHeader h3 {
+  margin: 10px 10px;
 }
 
 .projectDescription {
   height: 20%;
+  font-size: 1.1rem;
+  margin: 0px 10px;
 }
 
 .footerContainer {
