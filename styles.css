@@ -2,23 +2,21 @@ body {
   display: flex;
   flex-direction: column;
 }
-.headerBackground {
+body::before {
   position: absolute;
-  background-color: #0991b2;
-  padding-top: 200px;
-  height: 450px;
   width: 100%;
-  margin-top: -200px;
-  box-shadow: 10px 10px 10px rgb(0 0 0 / 40%);
+  height: 40rem;
+  background-color: #0991b2;
+  content: "";
   transform: skewY(-10deg);
+  transform-origin: 0;
   z-index: -1;
+  top: -5rem;
 }
-.headerContainer {
-  /* margin-bottom: 150px; */
-}
+
 .picAndAboutContainer {
   min-height: 400px;
-  max-width: 80%;
+  max-width: 50%;
   justify-self: center;
   /* transform: skewY(10deg); */
   background-color: white;
@@ -37,7 +35,7 @@ body {
   margin-right: 20px;
   /* padding: 10px; */
 }
-img {
+.imgContainer img {
   max-width: 450px;
   max-height: 450px;
 }
@@ -94,7 +92,7 @@ img {
     margin: auto;
   }
 
-  img {
+  .imgContainer img {
     width: 90%;
     aspect-ratio: 1 / 1;
   }
@@ -124,17 +122,19 @@ img {
 }
 
 .contentContainer {
-  margin-top: 200px;
-}
-
-.contentContainer {
   display: flex;
   flex-direction: column;
+  margin-top: 100px;
+}
+
+.contentHeader {
+  font-size: 2.5rem;
+  margin: auto;
 }
 
 .projectList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 5em;
   width: 70%;
   margin: auto;
@@ -142,7 +142,7 @@ img {
 }
 
 .project {
-  width: 350px;
+  max-width: 30rem;
   height: 420px;
   display: flex;
   flex-direction: column;
@@ -151,39 +151,7 @@ img {
   justify-self: center;
 }
 
-#first .projectImg {
-  background-color: #972c26;
-  color: white;
-  height: 65%;
-}
-
-#second .projectImg {
-  background-color: #266297;
-  color: white;
-  height: 65%;
-}
-
-#third .projectImg {
-  background-color: #269746;
-  color: white;
-  height: 65%;
-}
-
-#fourth .projectImg {
-  background-color: #268f97;
-  color: white;
-  height: 65%;
-}
-
-#fifth .projectImg {
-  background-color: #b72182;
-  color: white;
-  height: 65%;
-}
-
-#sixth .projectImg {
-  background-color: #ef4923;
-  color: white;
+.projectImg {
   height: 65%;
 }
 
@@ -201,4 +169,41 @@ img {
   margin: auto;
   width: 100%;
   margin-top: 50px;
+  color: white;
+  padding: 40px;
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-around;
+}
+
+.projectImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1520px) {
+  .projectList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1100px) {
+  .projectList {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .project {
+    max-width: 28rem;
+  }
+}
+
+.footerContainer img {
+  max-width: 40%;
+  height: auto;
+  object-fit: contain;
+}
+
+.contactInfoContainer {
+  width: 30rem;
 }
